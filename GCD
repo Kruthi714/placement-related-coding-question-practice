@@ -1,0 +1,42 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("enter the first and second no");
+        Scanner sc=new Scanner(System.in);
+        int num1=sc.nextInt();
+        int num2=sc.nextInt();
+        int n;
+        if(num1<num2)
+        {
+           n=num1; 
+        }
+        else
+        {
+            n=num2;
+        }
+        while(n>0)
+        {
+            if(num1%n==0 && num2%n==0)
+            {
+                System.out.println("GCD of "+num1+","+num2+" is "+n);
+                System.exit(0);
+            }
+            else
+            {
+                n-=1;
+            }
+        }
+         System.out.println("GCD of "+num1+","+num2+" is "+n);
+    }
+//orrr
+int gcd(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+}
