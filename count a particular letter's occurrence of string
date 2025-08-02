@@ -1,0 +1,23 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.print("Enter the letter u want to count :");
+        Scanner sc = new Scanner(System.in);
+        char n = sc.next().charAt(0);
+        String s="DESKNINE";
+        int count=0;
+        for(int i=0;i<s.length();i++)
+        {
+            char c=s.charAt(i);
+            if(Character.toUpperCase(n)==c)
+            {
+                count+=1;
+            }
+        }
+        System.out.println(n+" is occurred "+count+" times");
+
+       
+
+    }        
+}
