@@ -1,0 +1,33 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter the number of elements:");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        System.out.println("Enter the elements:");
+        for(int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i < n; i++) {
+            boolean isUnique = true; 
+
+            for(int j = 0; j < n; j++) {
+                if(i != j && a[i] == a[j]) {
+                    isUnique = false;
+                    break;
+                }
+            }
+
+            if(isUnique) {
+                System.out.println(a[i] + " is the first non-repeating number");
+                return;
+            }
+        }
+
+        System.out.println("No non-repeating number found");
+    }
+}
