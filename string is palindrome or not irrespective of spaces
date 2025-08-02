@@ -1,0 +1,23 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        String str="anne i vote more cars race rome-to-vienna";
+        String s=str.replaceAll(" ","");
+        String b=s.replaceAll("-","");
+        StringBuilder sb=new StringBuilder(b);
+        sb.reverse();
+        for(int i=0;i<b.length();i++)
+        {
+            if(b.charAt(i)!=sb.charAt(i))
+            {
+                System.out.println("not a palindrome");
+                System.exit(0);
+            }
+        }
+        System.out.println("is a palindrome");
+        
+        
+        
+    }
+}
