@@ -1,0 +1,42 @@
+class Main {
+    public static void main(String[] args) {
+        String s="My NaMe Is KrUtHi";
+        StringBuilder a=new StringBuilder("");
+        char c,f;
+        int d,e;
+        
+        for(int i=0;i<s.length();i++)
+        {
+            c=s.charAt(i);
+            if(s.charAt(i)==' ')
+            {
+                a.append(' ');
+            }
+            
+            else if(Character.isUpperCase(c))
+            {
+            
+            d=(int)c;
+
+            e=d+32;
+
+            f=(char)e;
+
+             a.append(f);
+            }
+            else
+            {
+            d=(int)c;
+
+            e=d-32;
+
+            f=(char)e;
+
+             a.append(f); 
+        }
+         
+    }
+    System.out.println(a);
+    
+}
+}
